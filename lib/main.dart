@@ -17,3 +17,22 @@ import 'package:flutter/material.dart';
 import 'app.dart';
 
 void main() => runApp(const ShrineApp());
+
+/* Why Using const ?
+
+  In Flutter, the const keyword is used to create a compile-time constant.
+  When you use const with a widget, it tells Flutter that the widget is immutable and will never change.
+  This allows Flutter to optimize performance by reusing the widget instead of rebuilding it every time the UI changes.
+
+  Reasons to Use const:
+
+    1.Performance Optimization: By using const ShrineApp(), you are telling Flutter that the ShrineApp widget is a constant and should not be rebuilt unnecessarily.
+                                Flutter can reuse this widget, avoiding additional processing during the widget tree's build phase.
+
+    2. Widget Immutability: const is a way to indicate that a widget’s properties are not going to change.
+                           If a widget has all constant properties, marking it as const ensures that it is immutable and can be safely reused without further evaluation.
+
+    3. Compilation Efficiency: Widgets marked with const are instantiated at compile time, not at runtime.
+                               This reduces the overhead during runtime and can lead to faster startup times for the application.
+
+ */
