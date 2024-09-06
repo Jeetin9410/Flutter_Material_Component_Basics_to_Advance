@@ -14,6 +14,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'colors.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -22,11 +24,11 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // TODO: Add text editing controllers (101)
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final _usernameController = TextEditingController();
-    final _passwordController = TextEditingController();
+
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -42,21 +44,19 @@ class _LoginPageState extends State<LoginPage> {
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 const SizedBox(height: 100.0),
-                const Text('LOGIN', style: TextStyle(fontSize: 24.0),),
+                Text('LOGIN', style: Theme.of(context).textTheme.headlineSmall, ),
                 const SizedBox(height: 50.0),
                 TextField(
                   controller: _usernameController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: "Username",
-                      filled: true
                   ),
                 ),
                 const SizedBox(height: 20.0),
                 TextField(
                   controller: _passwordController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: "Password",
-                    filled: true
                   ),
                   obscureText: true,
                 ),
@@ -65,7 +65,9 @@ class _LoginPageState extends State<LoginPage> {
                   alignment: MainAxisAlignment.end,
                   children: <Widget>[
                     TextButton(
-                      child: const Text('CANCEL'),
+                      child: Text('CANCEL',
+                        style: TextStyle(color: Theme.of(context).colorScheme.secondary),
+                      ),
                       onPressed: () {
                         _usernameController.clear();
                         _passwordController.clear();
@@ -76,6 +78,11 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: kShrineBrown900,
+                        backgroundColor: kShrinePink100,
+                        elevation: 4.0,
+                      ),
                     ),
                   ],
                 )
