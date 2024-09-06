@@ -18,7 +18,12 @@ dev_dependencies:
   flutter_lints: ^1.0.0
 
 flutter:
-  # TODO: Insert Fonts (103)
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Medium.ttf
+          weight: 400
   uses-material-design: true
   assets:
     - assets/diamond.png
