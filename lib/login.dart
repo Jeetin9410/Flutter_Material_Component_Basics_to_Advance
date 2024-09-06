@@ -50,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _usernameController,
                   decoration: const InputDecoration(
                     labelText: "Username",
+                    labelStyle: TextStyle(color: kShrinePurple)
                   ),
                 ),
                 const SizedBox(height: 20.0),
@@ -57,6 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _passwordController,
                   decoration: const InputDecoration(
                       labelText: "Password",
+                      labelStyle: TextStyle(color: kShrinePurple)
                   ),
                   obscureText: true,
                 ),

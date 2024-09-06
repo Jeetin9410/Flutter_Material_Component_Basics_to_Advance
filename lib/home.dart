@@ -80,6 +80,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
+        titleSpacing: 0.0,
         title: const Text("Shrine"),
         leading: IconButton(
           onPressed: () {},

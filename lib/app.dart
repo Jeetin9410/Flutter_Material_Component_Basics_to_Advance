@@ -24,21 +24,21 @@ ThemeData _buildShrineTheme() {
   final ThemeData base = ThemeData.light(useMaterial3: true);
   return base.copyWith(
       colorScheme: base.colorScheme.copyWith(
-        primary: kShrinePink100,
+        primary: kShrinePurple,
         onPrimary: kShrineBrown900,
         secondary: kShrineBrown900,
         error: kShrineErrorRed,
       ),
       textTheme: _buildShrineTextTheme(base.textTheme),
       textSelectionTheme: const TextSelectionThemeData(
-        selectionColor: kShrinePink100,
+        selectionColor: kShrinePurple,
       ),
     inputDecorationTheme: const InputDecorationTheme(
       border: OutlineInputBorder(),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
           width: 2.0,
-          color: kShrineBrown900,
+          color: kShrinePurple,
         ),
       ),
       floatingLabelStyle: TextStyle(
